@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+#site_wrap{ 
+    background-size:cover;
+    height:100vh;
+    display: grid;
+    grid-template-columns: 
+        1fr
+        1fr
+        1fr
+        1fr
+    ;
+    grid-gap:0px;
+    grid-template-rows:
+        161px  
+        1048px
+        min-content
+        1fr
+    ;
+    grid-template-areas:
+        "header header header header"
+        "photo photo photo photo"
+        ". content content ."
+        "footer footer footer footer"
+}
+
+.header{
+    grid-area:header;
+    padding: 50px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.header .nav{
+    list-style: none;
+    padding:0;
+    display: flex;
+}
+.header .nav a{
+    text-decoration: none;
+    background-color:#43425D;
+    border-radius: 1em;
+    color: white;
+    padding: 13px 38px;
+    margin:0 10px;
+    font-weight: bold;
+    display:inline-block;
+}
+.header .nav a:hover, .header .nav .active{
+    background-color:white;
+    color:#43425D;
+    font-weight: lighter;
+}
+
+.featured_photo{
+    grid-area:photo;
+    background-size:cover;
+}
+.content{
+    grid-area:content;
+}
+.content h1{
+    text-align:center;
+    color:#43425D;
+
+}
+.content p{
+    font-size: medium;
+    text-align:center;
+    color:#43425D;
+}
+.footer{
+    background-color:#43425D;
+    color:white;
+    text-align:center;
+    padding:2em;
+    font-size:smaller;
+    grid-area:footer;
+}
+
+#film_background{
+    background-image:url(Images/16.jpg);
+    background-size:cover;
+    height:100vh;
+}
+
+#about_background{
+    background-image:url(Images/slate-8.png);
+    background-size:cover;
+    height:100vh;
+}
+
+#lifestyle_background{
+    background-image:url(Images/lifestyle.jpg);
+    background-size:cover;
+    height:100vh;
+}
+
+#sport_background{
+    background-image:url(Images/sport.jpg);
+    background-size:cover;
+    height:110vh;
+}
+
+#nature_background{
+    background-image:url(Images/nature.jpg);
+    background-size:cover;
+    height:110vh;
+}
+@media screen and (max-width:480px){
+    #site_wrap{
+        background-color: red;
+        height:100vh;
+        display: grid;
+        grid-template-columns: 
+            1fr
+            1fr
+            1fr
+            1fr
+        ;
+        grid-gap:0px;
+        grid-template-rows:
+            min-content
+            1048px
+            min-content
+            1fr
+        ;
+        grid-template-areas:
+            "header header header header"
+            "photo photo photo photo"
+            "content content content content"
+            "footer footer footer footer"
+    }
+    .header .nav{
+        list-style: none;
+        padding:0;
+        display: flex;
+        flex-direction:column;
+    }
+    .header .nav a{
+        margin:0.5em;
+    }
+}
+
+/* Film Styles */
